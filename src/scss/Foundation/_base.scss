@@ -1,0 +1,23 @@
+@use "variable.scss" as variable;
+
+//base
+html{
+    font-family:variable.$font-jp;
+    font-weight: normal;
+    color:variable.$text-black;
+    letter-spacing:1px;
+}
+
+img{
+    max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+a{
+    display: block;
+}
+
+span{
+    vertical-align: bottom;
+}

@@ -1,0 +1,41 @@
+@use "../../Foundation/variable.scss" as variable;
+
+.c-morebtn{
+    float:right;
+    display: flex;
+    align-items: center;
+    column-gap:16px;
+    margin-top:56px;
+    &__txt{
+        text-decoration: underline;
+        font-weight: bold;
+        font-family:variable.$font-en;
+        font-size:18px;
+    }
+    &__circle{
+        display: flex;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position:relative;
+        &::after{
+            content:">";
+            display: block;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+        svg{
+            transform: rotate(90deg); /*線の開始位置を12時の方向にする*/
+            &:hover{
+                background-color: #000;
+                color: #fff;
+                transition: background-color .2s 1s,color .2s 1s;
+            }
+        }
+    }
+}

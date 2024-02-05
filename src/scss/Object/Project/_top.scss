@@ -1,0 +1,101 @@
+@use "../../Foundation/variable.scss" as variable;
+
+.p-top{
+    //kv
+    &__kv{
+        width:100%;
+        font-family:variable.$font-en;
+        &__top{
+            max-width:800px;
+            margin:0 auto;
+            padding-top:10.1%;
+        }
+        &__ttl{
+            font-size:88px;
+            line-height:1.35;
+            span{
+                font-size:100px;
+                display: block;
+            }
+            span:nth-of-type(2){
+                font-weight: bold;
+            }
+        }
+        &__bottom{
+            max-width:1200px;
+            margin:0 auto;
+            justify-content: space-between;
+            margin-top:3%;
+            display: flex;
+            align-items:baseline;
+        }
+        &__period{
+            font-size:80px;
+            span{
+                font-family:variable.$font-jp;
+            }
+        }
+        &__scroll{
+            width:160px;
+            position: relative;
+            img{
+                animation:14s linear infinite rotation;
+                @keyframes rotation{
+                    0%{ transform:rotate(0);}
+                    100%{ transform:rotate(360deg); }
+                }
+            }
+            span{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                font-size:36px;
+            }
+            .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 300,
+            'GRAD' 0,
+            'opsz' 24
+            }
+        }
+    }
+
+    //about
+    &__about{
+        &__inner{
+            max-width:1000px;
+            margin:0 auto;
+        }
+        &__body{
+            display: flex;
+            column-gap:64px;
+        }
+        &__name{
+            margin-bottom:28px;
+        }
+        &__desc{
+            line-height: 2;
+            margin-bottom:28px;
+        }
+        &__img{
+            img{
+                box-shadow: 32px 38px 44px -12px #d1d1d1;
+            }
+        }
+        &__snslist{
+            display:flex;
+            column-gap:16px;
+        }
+        &__snslist__item{
+            width:28px;
+            a{
+                display:block;
+            }
+        }
+    }
+}
+
