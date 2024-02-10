@@ -1,9 +1,10 @@
 @use "../../Foundation/variable.scss" as variable;
 
 .c-morebtn{
-    float:right;
+    // float:right;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     column-gap:16px;
     margin-top:56px;
     &__txt{
