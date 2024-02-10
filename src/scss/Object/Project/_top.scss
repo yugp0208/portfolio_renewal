@@ -181,19 +181,74 @@
     }
 
     //nameloop
-    &__nameloop{
-        font-size:100px;
-        -webkit-text-stroke: 2px variable.$text-black;
-        color: variable.$text-white;
-        font-family:variable.$font-en;
+    &__loop{
+        width:100vw;
         &__inner{
-            margin: 0 calc(50% - 50vw);
+            max-width:initial !important;
+            padding:160px 0;
+        }
+        &__loop{
+            display: flex;
             width: 100vw;
+            overflow: hidden;
         }
         &__txt{
+            font-size:100px;
+            -webkit-text-stroke: 2px variable.$text-black;
+            color: variable.$text-white;
+            font-family:variable.$font-en;
+            letter-spacing:3px;
+            font-weight: bold;
+            width:100%;
+            animation: loopAnimation 20s linear infinite;
+            @keyframes loopAnimation {
+                0% { transform:translateX(0); }
+                100% { transform:translateX(-100%); }
+            }
+        }
+    }
+
+    //interest
+    &__interest{
+        &__inner{
+            padding-bottom:160px !important;
+        }
+        &__top{
+            margin-bottom:8%;
+            .p-top__interest__list{
+                align-items: center;
+            }
+            .p-top__interest__item{
+                &:first-child{
+                    margin-right:9.5%;
+                }
+                &:nth-of-type(2){
+                    margin-right:20.5%;
+                }
+            }
+        }
+        &__bottom{
+            margin: 0 calc(50% - 50vw);
+            width: 100vw;
+            .p-top__interest__item{
+                &:first-child{
+                    margin-right:14.7%;
+                    margin-top:2.8%;
+                }
+                &:nth-of-type(2){
+                    margin-right:6.73%;
+                    margin-top:12.9%;
+                }
+                &:nth-of-type(3){
+                    margin-right:19.4%;
+                }
+                &:last-child{
+                    margin-top:2.8%;
+                }
+            }
+        }
+        &__list{
             display: flex;
-            flex-wrap: nowrap;
         }
     }
 }
-
