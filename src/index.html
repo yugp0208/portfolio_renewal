@@ -24,12 +24,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
     <link rel="stylesheet" href="./scss/style.scss">
   </head>
   <body>
-    <header class="l-header">
+    <!--loader-bg-->
+    <div class="p-top__loader__bg js-loader-bg">
+      <div class="p-top__loader__name js-loader-name">Yugo Hayashi</div>
+    </div>
+    <header class="l-header js-header">
       <div class="l-header__inner">
         <div class="l-header__logo">
           <h1><img src="img/common/logo_dummy.svg" alt=""></h1>
@@ -37,8 +42,8 @@
         <div class="l-header__nav">
           <nav>
             <ul class="l-header__list">
-              <li class="l-header__list__item"><a href="#">About</a></li>
-              <li class="l-header__list__item"><a href="#">Works</a></li>
+              <li class="l-header__list__item"><a class="l-header__list__item__link" href="#about">About</a></li>
+              <li class="l-header__list__item"><a class="l-header__list__item__link" href="#works">Works</a></li>
             </ul>
           </nav>
           <div class="l-header__mail"><a href="mailto:yuu.fepnhdper2000@gmail.com"><span class="material-symbols-outlined">mail</span></a></div>
@@ -51,14 +56,14 @@
           <p class="p-top__kv__ttl"><span>Frontend Developer</span><span>Yugo Hayashi</span><span>Portfolio</span></p>
         </div>
         <div class="p-top__kv__bottom">
-          <div class="p-top__kv__period">2018 <span>-</span> 2024</div>
+          <div class="p-top__kv__period"><span>2018</span><span>&minus;</span><span class="js-count" id="js-current-year" data-from="0" data-to="">0</span></div>
           <div class="p-top__kv__scroll">
-            <img src="img/scroll_circle.webp" alt="Scroll Down">
+            <img src="img/scroll_circle.webp" alt="Scroll Down" width="200" height="200">
             <span class="material-symbols-outlined">south</span>
           </div>
         </div>
       </section><!--kv-->
-      <section class="c-section p-top__about">
+      <section class="c-section p-top__about" id="about">
         <div class="c-section__inner p-top__about__inner">
           <h2 class="c-section__ttl"><span>私について</span>About</h2>
           <div class="p-top__about__body">
@@ -68,13 +73,13 @@
                 大阪のIT専門学校で2年間デザインとプログラミングを学習し、 20年に就職で上京。その後4年間、Webコーダーとして働く。<br>
                 GSAPやThree.jsを使って世界観を拡張しているWebサイトに興味があり、効果的に使用してより良いWebサイトを作る事を目指す。</p>
               <ul class="p-top__about__snslist">
-                <li class="p-top__about__snslist__item"><a href="#" target="_blank"><img src="img/sns/instagram-black.svg" alt=""></a></li>
-                <li class="p-top__about__snslist__item"><a href="#" target="_blank"><img src="img/sns/github-black.svg" alt=""></a></li>
-                <li class="p-top__about__snslist__item"><a href="#" target="_blank"><img src="img/sns/zenn-black.svg" alt=""></a></li>
+                <li class="p-top__about__snslist__item"><a href="#" target="_blank"><img src="img/sns/instagram-black.svg" alt="instagram"></a></li>
+                <li class="p-top__about__snslist__item"><a href="#" target="_blank"><img src="img/sns/github-black.svg" alt="github"></a></li>
+                <li class="p-top__about__snslist__item"><a href="#" target="_blank"><img src="img/sns/zenn-black.svg" alt="zenn"></a></li>
               </ul>
             </div>
             <div class="p-top__about__img">
-              <img src="img/about_01.webp" alt="" width="400" height="267">
+              <img src="img/about_01.webp" alt="YugoHayashi" width="400" height="267">
             </div>
           </div>
           <div class="c-morebtn">
@@ -88,7 +93,7 @@
           </div>
         </div>
       </section><!--about-->
-      <section class="c-section p-top__skill">
+      <section class="c-section p-top__skill js-skill">
         <div class="c-section__inner p-top__skill">
           <h2 class="c-section__ttl"><span>できること</span>Skill</h2>
           <div class="p-top__skill__content">
@@ -113,7 +118,7 @@
           </div>
         </div>
       </section><!--skill-->
-      <section class="c-section p-top__works">
+      <section class="c-section p-top__works" id="works">
         <div class="c-section__inner p-top__works__inner">
           <h2 class="c-section__ttl"><span>制作実績</span>Works</h2>
           <div class="p-top__works__list">
@@ -162,24 +167,24 @@
           <div class="p-top__interest__content">
             <div class="p-top__interest__top">
               <ul class="p-top__interest__list">
-                <li class="p-top__interest__item"><img src="img/interest_01.webp" alt="" width="300" height="300"></li>
-                <li class="p-top__interest__item"><img src="img/interest_02.webp" alt="" width="165" height="165"></li>
-                <li class="p-top__interest__item"><img src="img/interest_03.webp" alt="" width="230" height="230"></li>
+                <li class="p-top__interest__item"><img src="img/interest_01.webp" class="js-parallax" alt="interestImg" width="300" height="300"></li>
+                <li class="p-top__interest__item"><img src="img/interest_02.webp" class="js-parallax" alt="interestImg" width="165" height="165"></li>
+                <li class="p-top__interest__item"><img src="img/interest_03.webp" class="js-parallax" alt="interestImg" width="230" height="230"></li>
               </ul>
             </div>
             <div class="p-top__interest__bottom">
               <ul class="p-top__interest__list">
-                <li class="p-top__interest__item"><img src="img/interest_04.webp" alt="" width="160" height="160"></li>
-                <li class="p-top__interest__item"><img src="img/interest_05.webp" alt="" width="180" height="180"></li>
-                <li class="p-top__interest__item"><img src="img/interest_06.webp" alt="" width="300" height="300"></li>
-                <li class="p-top__interest__item"><img src="img/interest_07.webp" alt="" width="166" height="166"></li>
+                <li class="p-top__interest__item"><img src="img/interest_04.webp" class="js-parallax" alt="interestImg" width="160" height="160"></li>
+                <li class="p-top__interest__item"><img src="img/interest_05.webp" class="js-parallax" alt="interestImg" width="180" height="180"></li>
+                <li class="p-top__interest__item"><img src="img/interest_06.webp" class="js-parallax" alt="interestImg" width="300" height="300"></li>
+                <li class="p-top__interest__item"><img src="img/interest_07.webp" class="js-parallax" alt="interestImg" width="166" height="166"></li>
               </ul>
             </div>
           </div>
         </div>
       </section><!--interest-->
     </main><!--main-->
-    <footer class="l-footer">
+    <footer class="l-footer js-footer">
       <div class="l-footer__contact">
         <a class="l-footer__contact__inner" href="mailto:yuu.fepnhdper2000@gmail.com">
           <p class="l-footer__contact__ttl">Contact Us</p>
@@ -191,8 +196,8 @@
       <div class="l-footer__nav">
         <div class="l-footer__nav__inner">
           <ul class="l-footer__nav__list">
-            <li class="l-footer__nav__item"><a href="#">About</a></li>
-            <li class="l-footer__nav__item"><a href="#">Works</a></li>
+            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link" href="#about">About</a></li>
+            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link" href="#works">Works</a></li>
           </ul>
         </div>
       </div>

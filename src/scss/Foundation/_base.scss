@@ -6,6 +6,13 @@ html{
     font-weight: normal;
     color:variable.$text-black;
     letter-spacing:1px;
+    scroll-behavior: smooth;
+}
+
+body{
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 img{

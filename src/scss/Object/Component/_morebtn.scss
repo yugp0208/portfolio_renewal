@@ -1,15 +1,15 @@
 @use "../../Foundation/variable.scss" as variable;
 
 .c-morebtn{
-    // float:right;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     column-gap:16px;
     margin-top:56px;
+    cursor: pointer;
     &__txt{
         text-decoration: underline;
-        font-weight: bold;
+        font-weight:500;
         font-family:variable.$font-en;
         font-size:18px;
     }
