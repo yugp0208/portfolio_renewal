@@ -10,6 +10,7 @@ html{
 }
 
 body{
+    // overflow-x: hidden;
     &.no-scroll {
         overflow: hidden;
     }
@@ -28,3 +29,7 @@ a{
 span{
     vertical-align: bottom;
 }
+
+// *{
+//     border:solid 0.5px red;
+// }

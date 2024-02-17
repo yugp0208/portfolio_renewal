@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
     <link rel="stylesheet" href="./scss/style.scss">
   </head>
-  <body>
+  <body id="#top">
     <!--loader-bg-->
     <div class="p-top__loader__bg js-loader-bg">
       <div class="p-top__loader__name js-loader-name">Yugo Hayashi</div>
@@ -42,6 +42,7 @@
         <div class="l-header__nav">
           <nav>
             <ul class="l-header__list">
+              <li class="l-header__list__item"><a class="l-header__list__item__link" href="#top">Top</a></li>
               <li class="l-header__list__item"><a class="l-header__list__item__link" href="#about">About</a></li>
               <li class="l-header__list__item"><a class="l-header__list__item__link" href="#works">Works</a></li>
             </ul>
@@ -49,6 +50,25 @@
           <div class="l-header__mail"><a href="mailto:yuu.fepnhdper2000@gmail.com"><span class="material-symbols-outlined">mail</span></a></div>
         </div>
       </div>
+      <button type="button" id="js-hamburger" class="c-hamburger" aria-controls="global-nav" aria-expanded="true">
+        <span class="c-hamburger__line">
+          <span class="u-visuallyHidden">
+            メニューを開閉する
+          </span>
+        </span>
+      </button><!--c-hamburger-->
+      <div class="c-hamburger__drawer" id="js-hamburgerDrawer">
+        <div class="c-hamburger__drawer__inner">
+          <nav class="c-hamburger__drawer__nav">
+            <ul class="c-hamburger__drawer__nav__list">
+              <li class="c-hamburger__drawer__nav__item"><a href="#top">Top</a></li>
+              <li class="c-hamburger__drawer__nav__item"><a href="#about">About</a></li>
+              <li class="c-hamburger__drawer__nav__item"><a href="#works">Works</a></li>
+              <li class="c-hamburger__drawer__nav__item"><a href="mailto:yuu.fepnhdper2000@gmail.com">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div><!--c-hamburger__drawer-->
     </header><!--header-->
     <main class="l-main">
       <section class="p-top__kv">
@@ -56,7 +76,7 @@
           <p class="p-top__kv__ttl"><span>Frontend Developer</span><span>Yugo Hayashi</span><span>Portfolio</span></p>
         </div>
         <div class="p-top__kv__bottom">
-          <div class="p-top__kv__period"><span>2018</span><span>&minus;</span><span class="js-count" id="js-current-year" data-from="0" data-to="">0</span></div>
+          <div class="p-top__kv__period"><span>2018</span><span></span><span class="js-count" id="js-current-year" data-from="0" data-to="">0</span></div>
           <div class="p-top__kv__scroll">
             <img src="img/scroll_circle.webp" alt="Scroll Down" width="200" height="200">
             <span class="material-symbols-outlined">south</span>
@@ -83,13 +103,15 @@
             </div>
           </div>
           <div class="c-morebtn">
-            <div class="c-morebtn__txt">View More</div>
-            <div class="c-morebtn__circle js-morebtn">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="19.5" stroke="#ccc" stroke-width="1"></circle>
-                <circle cx="20" cy="20" r="19.5" stroke="#000" stroke-width="1" class="js-circle-01-icon" style="stroke-dasharray: 122.522; stroke-dashoffset: 122.522; opacity: 0;"></circle>
-              </svg>
-            </div>
+            <a href="#" class="c-morebtn__inner">
+              <div class="c-morebtn__txt">View More</div>
+              <div class="c-morebtn__circle js-morebtn">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="19.5" stroke="#ccc" stroke-width="1"></circle>
+                  <circle cx="20" cy="20" r="19.5" stroke="#000" stroke-width="1" class="js-circle-01-icon" style="stroke-dasharray: 122.522; stroke-dashoffset: 122.522; opacity: 0;"></circle>
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
       </section><!--about-->
@@ -124,8 +146,8 @@
           <div class="p-top__works__list">
             <div class="p-top__works__item">
               <div class="p-top__works__item__img">
-                <a href="#" target="_blank">
-                  <img src="https://placehold.jp/306x204.png" alt="Yugo Hayashi ポートフォリオサイト">
+                <a href="https://yugohayashi.com/" target="_blank">
+                  <img src="https://placehold.jp/306x204.png" alt="Yugo Hayashi ポートフォリオサイト" loading="lazy">
                 </a>
               </div>
               <p class="p-top__works__item__category">website</p>
@@ -133,8 +155,8 @@
             </div>
             <div class="p-top__works__item">
               <div class="p-top__works__item__img">
-                <a href="#" target="_blank">
-                  <img src="https://placehold.jp/306x204.png" alt="TokyoCamp様 FENIC ブランドページ">
+                <a href="https://tokyocamp.ooo/fenic/" target="_blank">
+                  <img src="https://placehold.jp/306x204.png" alt="TokyoCamp様 FENIC ブランドページ" loading="lazy">
                 </a>
               </div>
               <p class="p-top__works__item__category">webpage</p>
@@ -142,8 +164,8 @@
             </div>
             <div class="p-top__works__item">
               <div class="p-top__works__item__img">
-                <a href="#" target="_blank">
-                  <img src="https://placehold.jp/306x204.png" alt="小住匡彦様 Webサイト">
+                <a href="https://masahiko-ozumi.com/" target="_blank">
+                  <img src="https://placehold.jp/306x204.png" alt="小住匡彦様 Webサイト" loading="lazy">
                 </a>
               </div>
               <p class="p-top__works__item__category">website</p>
@@ -167,17 +189,17 @@
           <div class="p-top__interest__content">
             <div class="p-top__interest__top">
               <ul class="p-top__interest__list">
-                <li class="p-top__interest__item"><img src="img/interest_01.webp" class="js-parallax" alt="interestImg" width="300" height="300"></li>
-                <li class="p-top__interest__item"><img src="img/interest_02.webp" class="js-parallax" alt="interestImg" width="165" height="165"></li>
-                <li class="p-top__interest__item"><img src="img/interest_03.webp" class="js-parallax" alt="interestImg" width="230" height="230"></li>
+                <li class="p-top__interest__item"><img src="img/interest_01.webp" class="js-parallax" alt="interestImg" width="300" height="300" loading="lazy"></li>
+                <li class="p-top__interest__item"><img src="img/interest_02.webp" class="js-parallax" alt="interestImg" width="165" height="165" loading="lazy"></li>
+                <li class="p-top__interest__item"><img src="img/interest_03.webp" class="js-parallax" alt="interestImg" width="230" height="230" loading="lazy"></li>
               </ul>
             </div>
             <div class="p-top__interest__bottom">
               <ul class="p-top__interest__list">
-                <li class="p-top__interest__item"><img src="img/interest_04.webp" class="js-parallax" alt="interestImg" width="160" height="160"></li>
-                <li class="p-top__interest__item"><img src="img/interest_05.webp" class="js-parallax" alt="interestImg" width="180" height="180"></li>
-                <li class="p-top__interest__item"><img src="img/interest_06.webp" class="js-parallax" alt="interestImg" width="300" height="300"></li>
-                <li class="p-top__interest__item"><img src="img/interest_07.webp" class="js-parallax" alt="interestImg" width="166" height="166"></li>
+                <li class="p-top__interest__item"><img src="img/interest_04.webp" class="js-parallax" alt="interestImg" width="160" height="160" loading="lazy"></li>
+                <li class="p-top__interest__item"><img src="img/interest_05.webp" class="js-parallax" alt="interestImg" width="180" height="180" loading="lazy"></li>
+                <li class="p-top__interest__item"><img src="img/interest_06.webp" class="js-parallax" alt="interestImg" width="300" height="300" loading="lazy"></li>
+                <li class="p-top__interest__item"><img src="img/interest_07.webp" class="js-parallax" alt="interestImg" width="166" height="166" loading="lazy"></li>
               </ul>
             </div>
           </div>
@@ -196,6 +218,7 @@
       <div class="l-footer__nav">
         <div class="l-footer__nav__inner">
           <ul class="l-footer__nav__list">
+            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link" href="#top">Top</a></li>
             <li class="l-footer__nav__item"><a class="l-footer__nav__item__link" href="#about">About</a></li>
             <li class="l-footer__nav__item"><a class="l-footer__nav__item__link" href="#works">Works</a></li>
           </ul>

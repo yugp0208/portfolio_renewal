@@ -1,17 +1,52 @@
 @use "../../Foundation/variable.scss" as variable;
 
 .c-morebtn{
-    display: flex;
-    align-items: center;
+    display:flex;
     justify-content: flex-end;
-    column-gap:16px;
-    margin-top:56px;
-    cursor: pointer;
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap:16px;
+        margin-top:56px;
+        cursor: pointer;
+        width:fit-content;
+        &:hover{
+            .c-morebtn__circle{
+                background-color:variable.$text-black;
+                color:variable.$text-white;
+            }
+            .c-morebtn__txt{
+                &::after{
+                    transform: scale(1, 1);
+                    transform-origin: left top;
+                }
+            }
+        }
+    }
     &__txt{
-        text-decoration: underline;
         font-weight:500;
         font-family:variable.$font-en;
         font-size:18px;
+        position: relative;
+        &::after{
+            position: absolute;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: variable.$text-black;
+            bottom: -5px;
+            transform: scale(0, 1);
+            transform-origin: right top;
+            transition: transform 0.3s;
+        }
+        &:hover{
+            &::after{
+                transform: scale(1, 1);
+                transform-origin: left top;
+            }
+        }
     }
     &__circle{
         display: flex;
@@ -20,6 +55,7 @@
         height: 40px;
         border-radius: 50%;
         position:relative;
+        transition: 0.3s;
         &::after{
             content:">";
             display: block;
@@ -31,12 +67,7 @@
             -ms-transform: translate(-50%, -50%);
         }
         svg{
-            transform: rotate(90deg); /*線の開始位置を12時の方向にする*/
-            &:hover{
-                background-color: #000;
-                color: #fff;
-                transition: background-color .2s 1s,color .2s 1s;
-            }
+            transform: rotate(90deg);
         }
     }
 }

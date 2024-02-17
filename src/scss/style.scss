@@ -1,6 +1,7 @@
 /*Foundation*/
 @use "Foundation/variable.scss";
 @use "Foundation/base.scss";
+@use "Foundation/mixin.scss";
 
 
 /*Layout*/
@@ -12,6 +13,7 @@
 /*Component*/
 @use "Object/Component/section";
 @use "Object/Component/morebtn";
+@use "Object/Component/hamburger";
 
 /*Project*/
 @use "Object/Project/top.scss";

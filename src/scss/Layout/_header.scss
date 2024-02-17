@@ -1,9 +1,9 @@
 @use "../Foundation/variable.scss" as variable;
+@use "../Foundation/mixin.scss" as mixin;
 
 .l-header{
-    width:100%;
+    width:100vw;
     position: fixed;
-    mix-blend-mode: difference;
     z-index:100;
     &.js-invert{
         filter: invert(100%);
@@ -15,6 +15,17 @@
         align-items:center;
         justify-content: space-between;
         padding:16px 0;
+        position: relative;
+        mix-blend-mode: difference;
+        @include mixin.mq(xl){
+            padding:16px;
+        }
+        @include mixin.mq(md){
+            padding:24px 16px;
+        }
+    }
+    &__inner:has(.c-hamburger__drawer.is-active){
+        mix-blend-mode:normal;
     }
     &__list{
         display: flex;
@@ -48,6 +59,9 @@
         column-gap: 40px;
         font-family:variable.$font-en;
         font-weight: 500;
+        @include mixin.mq(md){
+            display: none;
+        }
     }
     &__mail{
         width:60px;

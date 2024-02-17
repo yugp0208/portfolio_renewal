@@ -1,4 +1,5 @@
 @use "../../Foundation/variable.scss" as variable;
+@use "../../Foundation/mixin.scss" as mixin;
 
 .c-section{
     width:100%;
@@ -6,12 +7,18 @@
         padding:100px 0;
         max-width:1000px;
         margin:0  auto;
+        @include mixin.mq(lg){
+            padding:100px 16px;
+        }
     }
     &__ttl{
         font-size:64px;
         font-weight:500;
         font-family:variable.$font-en;
         margin-bottom:64px;
+        @include mixin.mq(lg){
+            font-size:56px;
+        }
         span{
             font-weight:normal;
             display: block;
