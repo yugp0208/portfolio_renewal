@@ -3,4 +3,8 @@ const currentYear = () => {
     yearNow.setAttribute("data-to", new Date().getFullYear());
 }
 
-currentYear();
+let url = location.href;
+let url_search = url.includes("index.html");
+if (url_search) {
+    currentYear();
+}

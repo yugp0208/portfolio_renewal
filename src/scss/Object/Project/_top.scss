@@ -32,14 +32,13 @@
         height:100vh;
         font-family:variable.$font-en;
         &__top{
-            max-width:800px;
-            margin:0 auto;
+            display: flex;
+            justify-content: center;
             padding-top:10.2%;
             @include mixin.mq(xl){
                 padding-top:30%;
             }
             @include mixin.mq(lg){
-                max-width:600px;
                 padding-right:16px;
                 padding-left:16px;
             }
@@ -49,7 +48,7 @@
         }
         &__ttl{
             font-weight: 100;
-            line-height:1.35;
+            line-height:1.5;
             span{
                 font-size:90px;
                 display: block;
@@ -98,11 +97,20 @@
         &__period{
             font-size:90px;
             font-weight: 100;
+            pointer-events: none;
+            display: flex;
             @include mixin.mq(xl){
                 font-size:64px;
             }
             @include mixin.mq(sm){
                 font-size:50px;
+            }
+            span{
+                a{
+                    border-bottom:none;
+                    text-decoration: none;
+                    display: block;
+                }
             }
             span:nth-of-type(2){
                 font-family:variable.$font-jp;
@@ -197,16 +205,6 @@
                 box-shadow: 32px 38px 44px -12px #d1d1d1;
             }
         }
-        &__snslist{
-            display:flex;
-            column-gap:16px;
-        }
-        &__snslist__item{
-            width:28px;
-            a{
-                display:block;
-            }
-        }
     }
 
     //skill
@@ -289,8 +287,12 @@
         }
         &__item__img{
             margin-bottom: 24px;
+            border:solid 1px #e3e3e3;
             @include mixin.mq(md){
                 margin-bottom:16px;
+            }
+            img{
+                width:100%;
             }
         }
         &__item__category{

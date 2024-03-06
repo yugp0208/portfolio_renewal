@@ -9,7 +9,6 @@ const funcCircle = () => {
         circleIcon.style.strokeDasharray = rLength;
         circleIcon.style.strokeDashoffset = rLength;
 
-        //circleにマウスをのせたらアニメーションを起動
         circle.addEventListener("mouseover", () => {
             animation = gsap.fromTo(circleIcon, {
                 strokeDashoffset: rLength,
@@ -21,7 +20,6 @@ const funcCircle = () => {
             });
         })
 
-        //マウスが外れたら停止する
         circle.addEventListener("mouseout", () => {
             animation.pause();
             gsap.to(circleIcon, {

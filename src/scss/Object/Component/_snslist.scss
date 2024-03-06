@@ -1,0 +1,13 @@
+@use "../../Foundation/variable.scss" as variable;
+@use "../../Foundation/mixin.scss" as mixin;
+
+.c-snslist{
+    display:flex;
+    column-gap:16px;
+    &__item{
+        width:28px;
+        a{
+            display:block;
+        }
+    }
+}

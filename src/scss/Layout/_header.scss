@@ -1,6 +1,42 @@
 @use "../Foundation/variable.scss" as variable;
 @use "../Foundation/mixin.scss" as mixin;
 
+#top{
+    .l-header{
+        &__nav{
+            color:#333;
+        }
+    }
+}
+
+#about{
+    .l-header{
+        &__nav{
+            color:#FFF !important;
+        }
+        &__mail{
+            border:solid 1.3px variable.$text-white;
+            &:hover{
+                background-color:variable.$text-white;
+                .material-symbols-outlined{
+                    color:variable.$text-black;
+                }
+            }
+        }
+        &__list__item__link{
+            &::after{
+                background: variable.$text-white;
+            }
+            &:hover{
+                &::after{
+                    transform: scale(1, 1);
+                    transform-origin: left top;
+                }
+            }
+        }
+    }
+}
+
 .l-header{
     width:100vw;
     position: fixed;
@@ -21,11 +57,19 @@
             padding:16px;
         }
         @include mixin.mq(md){
-            padding:24px 16px;
+            // padding:24px 16px;
         }
     }
     &__inner:has(.c-hamburger__drawer.is-active){
         mix-blend-mode:normal;
+    }
+    &__logo{
+        width:60px;
+        height:60px;
+        @include mixin.mq(md){
+            width:48px;
+            height:48px;
+        }
     }
     &__list{
         display: flex;
@@ -55,7 +99,6 @@
     &__nav{
         display: flex;
         align-items:center;
-        color:#333;
         column-gap: 40px;
         font-family:variable.$font-en;
         font-weight: 500;
@@ -67,7 +110,7 @@
         width:60px;
         height:60px;
         border-radius:50%;
-        border:solid 1px #333;
+        border:solid 1.3px #333;
         display: flex;
         align-items: center;
         justify-content: center;

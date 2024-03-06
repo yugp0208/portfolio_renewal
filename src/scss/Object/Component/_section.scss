@@ -12,10 +12,8 @@
         }
     }
     &__ttl{
-        font-size:64px;
-        font-weight:500;
-        font-family:variable.$font-en;
         margin-bottom:64px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         @include mixin.mq(lg){
             font-size:56px;
         }
@@ -25,12 +23,19 @@
             font-size:16px;
             font-family:variable.$font-jp;
             margin-bottom:16px;
-            // &::before{
-            //     font-family: 'Material Icons Outlined';
-            //     content: '\f720';
-            //     display: block;
-            //     color:#333;
-            // }
+        }
+        span:nth-of-type(2){
+            font-size:64px;
+            font-weight:500;
+            font-family:variable.$font-en;
+        }
+        .char {
+            transform: translateY(100px);
+        }
+    }
+    &__ttl--works{
+        .char:first-child{
+            letter-spacing:-6px;
         }
     }
 }

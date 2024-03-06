@@ -40,7 +40,13 @@ const loaderAnimation = () => {
         },20);
     }
 
-    disableScroll();
+    const pageTop = document.getElementById("top");
+    if(pageTop === null){
+      enableScroll();
+    }
+    else{
+      disableScroll();
+    }
   
     gsap.set(header,{
       opacity:0,

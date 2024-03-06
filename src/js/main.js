@@ -1,8 +1,10 @@
 //js modules
+import "./module/headerInvert";
 import "./module/morebtn";
-// import "./module/headerInvert";
-// import "./module/parallax";
+import "./module/hamburger";
 import "./module/countUp";
 import "./module/loader";
 import "./module/currentYear";
-import "./module/hamburger";
+import "./module/textAnim";
+import "./module/targetInview";
+import "./module/timeline";
