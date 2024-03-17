@@ -1,0 +1,41 @@
+@use "../../Foundation/variable.scss" as variable;
+@use "../../Foundation/mixin.scss" as mixin;
+
+.c-works{
+    &__list{
+        display: flex;
+        gap:40px;
+        @include mixin.mq(md){
+            flex-direction:column;
+            gap:48px;
+        }
+    }
+    &__item{
+        width:calc(100% / 3);
+        @include mixin.mq(md){
+            width:100%;
+        }
+    }
+    &__item__img{
+        margin-bottom: 24px;
+        border:solid 1px #e3e3e3;
+        @include mixin.mq(md){
+            margin-bottom:16px;
+        }
+        img{
+            width:100%;
+            aspect-ratio:1 / 1;
+        }
+    }
+    &__item__category{
+        margin-bottom:12px;
+        font-size:12px;
+        color:#828282;
+        @include mixin.mq(md){
+            margin-bottom:8px;
+        }
+    }
+    &__item__ttl{
+        line-height:2;
+    }
+}

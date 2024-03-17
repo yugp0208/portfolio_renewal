@@ -38,6 +38,11 @@
                 vertical-align: -43px;
                 fill:#FFF;
                 margin-right:28px;
+                @include mixin.mq(md){
+                    margin-right:20px;
+                    width:47px;
+                    height:104px;
+                }
             }
         }
         &__loop{
@@ -51,6 +56,12 @@
             transform: translateX(-50%);
             -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
+            @include mixin.mq(sm){
+                bottom:20%;
+            }
+            @media screen and (max-width: 375px) {
+                bottom:15%;
+            }
             &__inner{
                 max-width:initial !important;
                 @include mixin.mq(md){

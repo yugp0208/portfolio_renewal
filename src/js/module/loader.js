@@ -114,6 +114,6 @@ const loaderAnimation = () => {
 
 let url = window.location.pathname;
 console.log(url)
-if(url !== "/about.html" & url !== "/works.html"){
+if(url === "/"){
   loaderAnimation();
 }
