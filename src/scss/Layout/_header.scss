@@ -15,11 +15,13 @@
             color:#FFF !important;
         }
         &__mail{
-            border:solid 1.3px variable.$text-white;
-            &:hover{
-                background-color:variable.$text-white;
-                .material-symbols-outlined{
-                    color:variable.$text-black;
+            a{
+                border:solid 1.3px variable.$text-white;
+                &:hover{
+                    background-color:variable.$text-white;
+                    .material-symbols-outlined{
+                        color:variable.$text-black;
+                    }
                 }
             }
         }
@@ -107,27 +109,29 @@
         }
     }
     &__mail{
-        width:60px;
-        height:60px;
-        border-radius:50%;
-        border:solid 1.3px #333;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition:.2s ease-in-out;
-        .material-symbols-outlined {
-            font-size:28px;
+        a{
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            border:solid 1.3px #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition:.2s ease-in-out;
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 200,
-            'GRAD' 0,
-            'opsz' 24
-        }
-        &:hover{
-            background-color:variable.$text-black;
-            .material-symbols-outlined{
-                color:#FFF;
+            .material-symbols-outlined {
+                font-size:28px;
+                transition:.2s ease-in-out;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 200,
+                'GRAD' 0,
+                'opsz' 24
+            }
+            &:hover{
+                background-color:variable.$text-black;
+                .material-symbols-outlined{
+                    color:#FFF;
+                }
             }
         }
     }
