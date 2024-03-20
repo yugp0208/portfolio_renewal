@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Works / Yugo Hayashi - 林優吾</title>
+    <title>TokyoCamp FENIC / Works / Yugo Hayashi - 林優吾</title>
     <!--meta-->
     <meta name="format-detection" content="telephone=no">
     <meta name="keywords" content="YUGO HAYSHI,Yugo Hayashi,林優吾,ハヤシユウゴ,ユウゴハヤシ,ホームページ,ウェブサイト,HP,Webサイト,Webサイト制作">
     <meta property="og:site_name" content="Yugo Hayashi - 林優吾">
     <meta name="description" content="Webデザイナー兼フロントエンドエンジニア 林優吾のポートフォリオサイト">
-    <meta property="og:title" content="Works / Yugo Hayashi - 林優吾" />
+    <meta property="og:title" content="TokyoCamp FENIC / Works / Yugo Hayashi - 林優吾" />
     <meta property="og:url" content="https://yugohayashi.com/">
     <meta property="og:description" content="Webデザイナー兼フロントエンドエンジニア 林優吾のポートフォリオサイト">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://yugohayashi.com/img/ogp/ogp.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://yugohayashi.com/img/ogp/ogp.webp" />
-    <meta name="twitter:title" content="Works / Yugo Hayashi - 林優吾" />
+    <meta name="twitter:title" content="TokyoCamp FENIC / Works / Yugo Hayashi - 林優吾" />
     <meta name="twitter:description" content="Webデザイナー兼フロントエンドエンジニア 林優吾のポートフォリオサイト" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!--Materialicon-->
@@ -29,24 +29,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
-    <link rel="stylesheet" href="./scss/style.scss">
+    <link rel="stylesheet" href="./../scss/style.scss">
     <!--GSAP-->
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/split-type"></script>
   </head>
-  <body id="works">
+  <body id="worksdetail">
     <header class="l-header js-header">
       <div class="l-header__inner">
-        <h1 class="l-header__logo"><a href="./"><img src="img/common/logo.svg" alt="" width="60" height="60"></a></h1>
+        <h1 class="l-header__logo"><a href="../"><img src="./../img/common/logo.svg" alt="" width="60" height="60"></a></h1>
         <div class="l-header__nav">
           <nav>
             <ul class="l-header__list">
-              <li class="l-header__list__item"><a class="l-header__list__item__link top" href="./">Top</a></li>
-              <li class="l-header__list__item"><a class="l-header__list__item__link about" href="about.html">About</a></li>
-              <li class="l-header__list__item"><a class="l-header__list__item__link works" href="#">Works</a></li>
+              <li class="l-header__list__item"><a class="l-header__list__item__link top" href="../">Top</a></li>
+              <li class="l-header__list__item"><a class="l-header__list__item__link about" href="../about.html">About</a></li>
+              <li class="l-header__list__item"><a class="l-header__list__item__link works" href="../works.html">Works</a></li>
             </ul>
           </nav>
-          <div class="l-header__mail"><a href="contact.html"><span class="material-symbols-outlined">mail</span></a></div>
+          <div class="l-header__mail"><a href="../contact.html"><span class="material-symbols-outlined">mail</span></a></div>
         </div>
       </div>
       <button type="button" id="js-hamburger" class="c-hamburger" aria-controls="global-nav" aria-expanded="true">
@@ -60,10 +60,10 @@
         <div class="c-hamburger__drawer__inner">
           <nav class="c-hamburger__drawer__nav">
             <ul class="c-hamburger__drawer__nav__list">
-              <li class="c-hamburger__drawer__nav__item"><a href="./">Top</a></li>
-              <li class="c-hamburger__drawer__nav__item"><a href="about.html">About</a></li>
-              <li class="c-hamburger__drawer__nav__item"><a href="#">Works</a></li>
-              <li class="c-hamburger__drawer__nav__item"><a href="contact.html">Contact Us</a></li>
+              <li class="c-hamburger__drawer__nav__item"><a href="../">Top</a></li>
+              <li class="c-hamburger__drawer__nav__item"><a href="../about.html">About</a></li>
+              <li class="c-hamburger__drawer__nav__item"><a href="../works.html">Works</a></li>
+              <li class="c-hamburger__drawer__nav__item"><a href="../contact.html">Contact Us</a></li>
             </ul>
           </nav>
         </div>
@@ -71,52 +71,25 @@
     </header><!--header-->
     <main class="l-main">
       <section class="c-section p-works">
-        <div class="c-section__inner p-works__inner">
+        <div class="p-works__inner">
           <h2 class="p-works__ttl">Works</h2>
-          <div class="c-works__list">
-            <div class="c-works__item">
-              <div class="c-works__item__img">
-                <a href="works/tokyosauna-ooo.html">
-                  <img src="img/work_04.webp" alt="SAUNA GOODS OOO" width="312" height="208">
-                </a>
-              </div>
-              <p class="c-works__item__category">website</p>
-              <h3 class="c-works__item__ttl">SAUNA GOODS OOO</h3>
+          <div class="p-works__detail">
+            <div class="p-works__detail__img">
+              <a href="https://saunagoods.ooo/" target="_blank">
+                <img src="../public/img/work_04.webp" alt="SAUNA GOODS OOO">
+              </a>
             </div>
-            <div class="c-works__item">
-              <div class="c-works__item__img">
-                <a href="works/yugohayashi.html">
-                  <img src="img/work_03.webp" alt="Yugo Hayashi Portfolio" width="312" height="208">
-                </a>
-              </div>
-              <p class="c-works__item__category">website</p>
-              <h3 class="c-works__item__ttl">Yugo Hayashi Portfolio</h3>
-            </div>
-            <div class="c-works__item">
-              <div class="c-works__item__img">
-                <a href="works/tokyocamp-fenic.html">
-                  <img src="img/work_02.webp" alt="TokyoCamp FENIC" width="312" height="208">
-                </a>
-              </div>
-              <p class="c-works__item__category">webpage</p>
-              <h3 class="c-works__item__ttl">TokyoCamp FENIC</h3>
-            </div>
-            <div class="c-works__item">
-              <div class="c-works__item__img">
-                <a href="works/masahiko-ozumi.html">
-                  <img src="img/work_01.webp" alt="Masahiko Ozumi Paris" width="312" height="208">
-                </a>
-              </div>
-              <p class="c-works__item__category">website</p>
-              <h3 class="c-works__item__ttl">Masahiko Ozumi Paris</h3>
-            </div>
+            <p class="p-works__detail__category">webpage</p>
+            <h2 class="p-works__detail__ttl"><a href="https://saunagoods.ooo/" target="_blank">SAUNA GOODS OOO</a></h2>
+            <p class="p-works__detail__skill">Design&nbsp;/&nbsp;Wordpress&nbsp;/</p>
+            <p class="p-works__detail__desc">SAUNA GOODS OOOのサイトを制作しました。</p>
           </div>
         </div>
       </section>
     </main>
     <footer class="l-footer js-footer">
       <div class="l-footer__contact">
-        <a class="l-footer__contact__inner" href="contact.html">
+        <a class="l-footer__contact__inner" href="../contact.html">
           <p class="l-footer__contact__ttl">Contact Us</p>
           <span class="material-symbols-outlined l-footer__contact__arrow">
             east
@@ -126,9 +99,9 @@
       <div class="l-footer__nav">
         <div class="l-footer__nav__inner">
           <ul class="l-footer__nav__list">
-            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link top" href="./">Top</a></li>
-            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link about" href="about.html">About</a></li>
-            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link works" href="#">Works</a></li>
+            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link top" href="../">Top</a></li>
+            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link about" href="../about.html">About</a></li>
+            <li class="l-footer__nav__item"><a class="l-footer__nav__item__link works" href="../works.html">Works</a></li>
           </ul>
         </div>
       </div>
@@ -138,6 +111,6 @@
         </div>
       </div>
     </footer><!--footer-->
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="./../js/main.js"></script>
   </body>
 </html>

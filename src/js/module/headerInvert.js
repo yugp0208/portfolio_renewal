@@ -18,4 +18,6 @@ const headerInvert = () => {
 
 }
 
-headerInvert()
+if (window.matchMedia("(min-width: 768px)").matches) {
+    headerInvert();
+}

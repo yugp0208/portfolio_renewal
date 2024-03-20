@@ -4,14 +4,16 @@
 .c-works{
     &__list{
         display: flex;
-        gap:40px;
+        flex-wrap:wrap;
+        column-gap:36px;
+        row-gap:56px;
         @include mixin.mq(md){
             flex-direction:column;
             gap:48px;
         }
     }
     &__item{
-        width:calc(100% / 3);
+        width:calc(100% / 3 - 24px);
         @include mixin.mq(md){
             width:100%;
         }

@@ -13,7 +13,8 @@ const cb = function(entries, observer) {
               const splitChar = document.querySelectorAll("#js-split .char");
               gsap.to(splitChar, {
                 y: 0,
-                stagger: 0.02
+                stagger: 0.05,
+                duration: 0.4,
               });
             observer.unobserve(entry.target);
         }

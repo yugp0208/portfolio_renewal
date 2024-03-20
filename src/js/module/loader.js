@@ -100,6 +100,8 @@ window.addEventListener('load', function(){
       .to(kvTtl,{
         opacity:1,
         y:0,
+        visibility: "visible",
+        display: "block",
         onComplete:() => {
           enableScroll();
         }
@@ -170,6 +172,7 @@ window.addEventListener('load', function(){
     gsap.set(kvTtl,{
       opacity:0,
       y: 50,
+      autoAlpha:0,
     })
     gsap.set(kvPeriod,{
       opacity:0,
@@ -185,6 +188,8 @@ window.addEventListener('load', function(){
     tl.to(kvTtl,{
       opacity:1,
       y:0,
+      visibility: "visible",
+      display: "block",
       onComplete:() => {
         enableScroll();
       }
@@ -211,5 +216,4 @@ window.addEventListener('load', function(){
   else {// 2回目以降の処理内容
     topCommonLoaderAnim();
   }
-
 })
