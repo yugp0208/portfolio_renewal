@@ -6,4 +6,5 @@ import "./module/loader";
 import "./module/textAnim";
 import "./module/targetInview";
 import "./module/timeline";
-import "./module/bodyFade";
+import "./module/pageTtlAnim";
+import "./module/worksListFade";
