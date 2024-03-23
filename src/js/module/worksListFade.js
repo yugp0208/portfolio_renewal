@@ -5,24 +5,28 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const worksListFade = () => {
-    const tl = gsap.timeline();
     const worksItem = document.querySelectorAll(".js-worksListFade");
-    worksItem.forEach(function(e){
-        gsap.set(e,{
+    const worksListTrigger = document.querySelector(".js-worksListTrigger");
+    gsap.fromTo(worksItem,
+        {
             opacity:0,
-            y: 10,
-        });
-        tl.to(e,{
+            y:15,
+        },
+        {
             opacity:1,
             y:0,
-            duration: 0.4,
+            duration: 0.6,
             visibility: "visible",
             display: "block",
             stagger: {
                 each: .5,
             },
-        });
-    });
+            scrollTrigger: {
+                trigger: worksListTrigger,
+                start: 'top center',
+            },
+        }
+    );
 }
 
 worksListFade();

@@ -11,31 +11,38 @@
             padding:100px 16px;
         }
     }
-    &__ttl{
+    &__ttl__wrap{
         margin-bottom:64px;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         @include mixin.mq(lg){
             font-size:56px;
         }
-        span{
+        .js-split-effect{
+            span{
+                display: inline-block;
+                opacity: 0;
+                visibility: visible;
+                transform: rotateY(90deg);
+            }
+        }
+    }
+    &__ttl{
+        font-size:64px;
+        font-weight:500;
+        font-family:variable.$font-en;
+        &--sub{
             font-weight:normal;
             display: block;
             font-size:16px;
             font-family:variable.$font-jp;
             margin-bottom:16px;
         }
-        span:nth-of-type(2){
-            font-size:64px;
-            font-weight:500;
-            font-family:variable.$font-en;
-        }
-        .char {
-            transform: translateY(100px);
-        }
     }
     &__ttl--works{
-        .char:first-child{
-            letter-spacing:-6px;
+        h2{
+            span:first-child{
+                letter-spacing:-6px;
+            }
         }
     }
 }

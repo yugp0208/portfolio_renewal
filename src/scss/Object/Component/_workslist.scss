@@ -14,7 +14,7 @@
     }
     &__item{
         width:calc(100% / 3 - 24px);
-        display: none;
+        // display: none;
         visibility: hidden;
         @include mixin.mq(md){
             width:100%;

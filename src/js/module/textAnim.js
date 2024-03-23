@@ -1,34 +1,33 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
-let targets = document.querySelectorAll('.js-target-inview');
-
-const cb = function(entries, observer) {
-    entries.forEach(function(entry){
-        if(entry.isIntersecting) {
-              const split = new SplitType("#js-split");
-              const splitChar = document.querySelectorAll("#js-split .char");
-              gsap.to(splitChar, {
-                y: 0,
-                stagger: 0.05,
-                duration: 0.4,
-              });
-            observer.unobserve(entry.target);
-        }
-    });
-}
-
-const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0
-}
-
-const io = new IntersectionObserver(cb, options);
-
-targets.forEach(function(object){
-    io.observe(object);
+let splitTarget = document.querySelectorAll('.js-split');
+splitTarget.forEach((target) => {
+    if(!target.classList.contains('is-active')){
+        let newText = '';
+        let spanText = target.innerHTML;
+        spanText.split('').forEach((char) => {
+            newText += '<span>' + char + '</span>';
+        });
+        target.innerHTML = newText;
+    }
 });
+
+let textEffect = document.querySelectorAll('.js-split-effect');
+textEffect.forEach((target)=>{
+    let spans = target.querySelectorAll('span');
+    gsap.to(spans,{
+        duration:0.2,
+        autoAlpha:1,
+        rotateY:'0deg',
+        stagger:{
+            each:0.16
+        },
+        scrollTrigger:{
+            trigger:target,
+            start:'bottom bottom',
+        }
+    })
+})
