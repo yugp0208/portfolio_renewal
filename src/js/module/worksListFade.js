@@ -15,11 +15,11 @@ const worksListFade = () => {
         {
             opacity:1,
             y:0,
-            duration: 0.6,
+            duration: 0.4,
             visibility: "visible",
             display: "block",
             stagger: {
-                each: .5,
+                each: 0.3,
             },
             scrollTrigger: {
                 trigger: worksListTrigger,
