@@ -8,3 +8,5 @@ import "./module/targetInview";
 import "./module/timeline";
 import "./module/pageTtlAnim";
 import "./module/worksListFade";
+import "./module/interestFade";
+import "./module/parallax";

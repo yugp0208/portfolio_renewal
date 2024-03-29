@@ -305,6 +305,7 @@
 
     //interest
     &__interest{
+        overflow: hidden;
         &__inner{
             padding-bottom:160px;
         }
@@ -408,9 +409,11 @@
             }
         }
         &__item{
+            visibility: hidden;
             @include mixin.mq(md){
                 margin:0 !important;
                 width:300px;
+                visibility: visible;
             }
             @include mixin.mq(sm){
                 width:70%;
