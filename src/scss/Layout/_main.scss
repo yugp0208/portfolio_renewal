@@ -1,0 +1,8 @@
+@use "../Foundation/variable.scss" as variable;
+@use "../Foundation/mixin.scss" as mixin;
+
+.l-main{
+    @media screen and (max-width: 900px) {
+        overflow: hidden;
+    }
+}

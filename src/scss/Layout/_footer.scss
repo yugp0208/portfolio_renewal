@@ -16,7 +16,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include mixin.mq(lg){
+        @include mixin.mq(xl){
             padding:0 24px 0 16px;
         }
         @include mixin.mq(sm){
