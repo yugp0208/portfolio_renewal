@@ -15,7 +15,10 @@
         margin-bottom:64px;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         @include mixin.mq(lg){
-            font-size:56px;
+            margin-bottom:56px;
+        }
+        @include mixin.mq(md){
+            margin-bottom:48px;
         }
         .js-split-effect{
             span{
@@ -30,12 +33,18 @@
         font-size:64px;
         font-weight:500;
         font-family:variable.$font-en;
+        @include mixin.mq(md){
+            font-size:48px;
+        }
         &--sub{
             font-weight:normal;
             display: block;
             font-size:16px;
             font-family:variable.$font-jp;
             margin-bottom:10px;
+            @include mixin.mq(md){
+                font-size:14px;
+            }
         }
     }
     &__ttl--works{

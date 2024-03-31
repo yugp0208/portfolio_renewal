@@ -15,6 +15,7 @@ window.addEventListener('load', function(){
       const kvTtl = document.querySelector(".p-top__kv__ttl");//kvのttl
       const kvPeriod = document.querySelector(".p-top__kv__period");//kvの年数
       const kvScroll = document.querySelector(".p-top__kv__scroll");//scroll
+      const kvImg = document.querySelector(".p-top__kv__img");//kvImg
 
       //notScroll
       function disableScroll() {
@@ -56,7 +57,7 @@ window.addEventListener('load', function(){
       else{
         disableScroll();
       }
-    
+
       gsap.set(header,{
         opacity:0,
         y: -30,
@@ -77,7 +78,11 @@ window.addEventListener('load', function(){
         opacity:0,
         y:0
       })
-    
+      gsap.set(kvImg,{
+        opacity:0,
+        y:0
+      })
+
       //AnimationStart
       const tl = gsap.timeline();
       tl.to(
@@ -121,12 +126,18 @@ window.addEventListener('load', function(){
         opacity:1,
         y:0,
       })
+      .to(kvImg,{
+        opacity:1,
+        y:0,
+        ease: "Power4.easeOut"
+      })
   }
 
   const topCommonLoaderAnim = () => {
     const kvTtl = document.querySelector(".p-top__kv__ttl");//kvのttl
     const kvPeriod = document.querySelector(".p-top__kv__period");//kvの年数
     const kvScroll = document.querySelector(".p-top__kv__scroll");//scroll
+    const kvImg = document.querySelector(".p-top__kv__img");//kvImg
 
     //notScroll
     function disableScroll() {
@@ -181,7 +192,11 @@ window.addEventListener('load', function(){
     gsap.set(kvScroll,{
       opacity:0,
       y: 50,
-    });
+    }),
+    gsap.set(kvImg,{
+      opacity:0,
+      y:0
+    })
   
     //AnimationStart
     const tl = gsap.timeline();
@@ -204,6 +219,11 @@ window.addEventListener('load', function(){
     .to(kvScroll,{
       opacity:1,
       y:0
+    })
+    .to(kvImg,{
+      opacity:1,
+      y:0,
+      ease: "Power4.easeOut"
     })
   }
 

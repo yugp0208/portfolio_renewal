@@ -1,4 +1,5 @@
 @use "../../Foundation/variable.scss" as variable;
+@use "../../Foundation/mixin.scss" as mixin;
 
 .c-morebtn{
     display:flex;
@@ -11,6 +12,9 @@
         margin-top:56px;
         cursor: pointer;
         width:fit-content;
+        @include mixin.mq(md){
+            margin-top:48px;
+        }
         &:hover{
             .c-morebtn__circle{
                 background-color:variable.$text-black;
