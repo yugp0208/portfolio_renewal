@@ -45,32 +45,88 @@
     }
 
     &__detail{
-        max-width: 800px;
-        margin:0 auto;
-        &__inner{
-            max-width:800px;
-            margin:0 auto;
+        &__ttl{
+            font-size:64px;
+            border-bottom: solid 1px #333;
+            font-family:variable.$font-en;
+            padding:0 24px;
+            padding-bottom:28px;
+            margin-bottom:40px;
+            @include mixin.mq(lg){
+                font-size:48px;
+            }
+            @include mixin.mq(md){
+                font-size:6.25vw;
+                margin-bottom: 32px;
+                padding: 0 12px;
+                padding-bottom: 24px;
+            }
+            @include mixin.mq(sm){
+                font-size:8.6vw;
+                padding-bottom: 18px;
+                margin-bottom:28px;
+            }
         }
         &__img{
-            margin-bottom:64px;
             border:solid 1px #e3e3e3;
-        }
-        &__category{
-            font-size:14px;
-            color:#828282;
-            margin-bottom:20px;
-        }
-        &__ttl{
-            font-size:18px;
-            font-weight: bold;
-            margin-bottom:20px;
-            display: inline-block;
-        }
-        &__skill{
-            margin-bottom:20px;
+            margin-bottom:40px;
+            @include mixin.mq(md){
+                margin-bottom: 32px;
+            }
         }
         &__desc{
-            line-height: 2;
+            line-height:1.8;
+            margin-bottom:40px;
+            padding:0 16px;
+            @include mixin.mq(lg){
+                padding:0 8px;
+            }
+            @include mixin.mq(md){
+                margin-bottom: 32px;
+            }
+        }
+        &__list{
+            padding:0 16px;
+            @include mixin.mq(lg){
+                padding:0 8px;
+            }
+        }
+        &__list__item{
+            display: flex;
+            margin-bottom:20px;
+            line-height:1.6;
+            dt{
+                font-weight:normal;
+                font-weight: bold;
+                min-width:max-content;
+            }
+            dd{
+                line-height: 1.8;
+            }
+        }
+        &__list__item__url{
+            text-decoration: underline;
+        }
+    }
+
+    &__visit__button{
+        width:100%;
+        position: fixed;
+        bottom:0;
+        z-index:15;
+        &.is-hidden{
+            display: none;
+        }
+        a{
+            background-color:rgba(51, 51, 51, 1);
+            color:#FFF;
+            width:100%;
+            text-align: center;
+            padding:24px 0;
+            transition: 0.4s ease-out;
+            &:hover{
+                background-color:rgba(71, 71, 71, 1);
+            }
         }
     }
 }
