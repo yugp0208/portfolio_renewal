@@ -10,4 +10,5 @@ import "./module/pageTtlAnim";
 import "./module/worksListFade";
 import "./module/interestFade";
 import "./module/parallax";
+import "./module/skillBorderAnim";
 // import "./module/visitButton";
