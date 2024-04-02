@@ -231,7 +231,10 @@ window.addEventListener('load', function(){
   const keyValue = true;
   if (!sessionStorage.getItem(keyName)) {// 初回閲覧時
       sessionStorage.setItem(keyName, keyValue);
-      topFirstLoaderAnim();
+      const url = window.location.pathname;
+      if(url === "/" || url === ""){
+        topFirstLoaderAnim();
+      }
   }
   else {// 2回目以降の処理内容
     topCommonLoaderAnim();

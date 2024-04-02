@@ -61,7 +61,7 @@ const interestFade = () => {
         {
             opacity: 1,
             y:0,
-            duration: 0.7,
+            duration: 0.6,
             visibility: "visible",
             display: "block",
         }
@@ -71,7 +71,7 @@ const interestFade = () => {
         {
             opacity: 1,
             y:0,
-            duration: 0.4,
+            duration: 0.3,
             visibility: "visible",
             display: "block",
         }
@@ -81,7 +81,7 @@ const interestFade = () => {
         {
             opacity: 1,
             y:0,
-            duration: 0.3,
+            duration: 0.2,
             visibility: "visible",
             display: "block",
         }
@@ -91,7 +91,7 @@ const interestFade = () => {
         {
             opacity: 1,
             y:0,
-            duration: 0.3,
+            duration: 0.2,
             visibility: "visible",
             display: "block",
         }
@@ -101,7 +101,7 @@ const interestFade = () => {
         {
             opacity: 1,
             y:0,
-            duration: 0.3,
+            duration: 0.2,
             visibility: "visible",
             display: "block",
         }
@@ -111,7 +111,7 @@ const interestFade = () => {
         {
             opacity: 1,
             y:0,
-            duration: 0.3,
+            duration: 0.2,
             visibility: "visible",
             display: "block",
         }
