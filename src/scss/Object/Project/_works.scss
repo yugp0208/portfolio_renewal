@@ -45,7 +45,7 @@
     }
 
     &__detail{
-        margin-bottom:120px;
+        margin-bottom:80px;
         font-size:16px;
         @include mixin.mq(md){
             margin-bottom:64px;
