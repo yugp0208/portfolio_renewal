@@ -126,11 +126,11 @@
             }
             @media screen and (max-width: 900px) {
                 position: initial;
-                padding-left:24px;
+                padding-left:16px;
             }
             @include mixin.mq(sm){
                 font-size:40px;
-                padding-left:16px;
+                padding-left:8px;
             }
             span{
                 color:#808080;

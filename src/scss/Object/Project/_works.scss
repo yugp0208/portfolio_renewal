@@ -6,9 +6,8 @@
     &__inner{
         max-width:1000px;
         margin:0 auto;
-        padding:0 16px !important;
-        @include mixin.mq(md){
-            padding:0 24px !important;
+        @include mixin.mq(lg){
+            padding:0 20px !important;
         }
     }
     &__ttl{

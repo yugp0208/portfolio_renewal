@@ -56,7 +56,7 @@
         position: relative;
         mix-blend-mode: difference;
         @include mixin.mq(xl){
-            padding:16px;
+            padding:16px 20px;
         }
         @include mixin.mq(md){
             // padding:24px 16px;

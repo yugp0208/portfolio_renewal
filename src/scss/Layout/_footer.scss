@@ -17,7 +17,7 @@
         align-items: center;
         justify-content: space-between;
         @include mixin.mq(xl){
-            padding:0 24px 0 16px;
+            padding:0 24px 0 20px;
         }
         @include mixin.mq(sm){
             font-size:32px;
@@ -64,7 +64,7 @@
         border-bottom:solid 1px #2B3131;
         padding:64px 0;
         @include mixin.mq(lg){
-            padding:48px 16px;
+            padding:48px 20px;
         }
     }
     &__nav__inner{
@@ -116,7 +116,7 @@
     &__copy{
         width:100%;
         @include mixin.mq(lg){
-            padding:0 16px;
+            padding:0 20px;
         }
     }
     &__copy__inner{

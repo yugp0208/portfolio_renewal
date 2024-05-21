@@ -107,9 +107,9 @@
             &__inner{
                 max-width:800px;
                 margin:0 auto;
-                @include mixin.mq(md){
+                @include mixin.mq(lg){
                     max-width:initial;
-                    padding:0 24px;
+                    padding:0 20px;
                 }
             }
             &__ttl{

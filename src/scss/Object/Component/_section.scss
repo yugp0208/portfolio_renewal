@@ -8,7 +8,7 @@
         max-width:1000px;
         margin:0  auto;
         @include mixin.mq(lg){
-            padding:100px 24px;
+            padding:100px 20px;
         }
     }
     &__ttl__wrap{
