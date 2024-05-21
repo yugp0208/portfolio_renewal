@@ -109,7 +109,7 @@
                 margin:0 auto;
                 @include mixin.mq(md){
                     max-width:initial;
-                    padding:0 16px;
+                    padding:0 24px;
                 }
             }
             &__ttl{
