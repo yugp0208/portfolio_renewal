@@ -2,10 +2,11 @@
 @use "../../Foundation/mixin.scss" as mixin;
 
 .p-works{
-    padding:167px 0 160px 0;
+    padding:160px 0;
     &__inner{
         max-width:1000px;
         margin:0 auto;
+        padding-top:0;
         @include mixin.mq(lg){
             padding:0 20px !important;
         }

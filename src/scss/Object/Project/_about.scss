@@ -3,12 +3,9 @@
 
 .p-about{
     &__kv{
-        padding:167px 0 100px 0;
+        padding:160px 0 100px 0;
         color:variable.$text-white;
         background-color:variable.$background-black;
-        @include mixin.mq(md){
-            padding:140px 0 100px 0;
-        }
         &__top{
             height:80vh;
             margin-bottom:64px;
