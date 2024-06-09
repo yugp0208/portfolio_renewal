@@ -87,7 +87,6 @@
             }
             @include mixin.mq(md){
                 margin-bottom: 32px;
-                font-size:15px !important;
             }
         }
         &__list{

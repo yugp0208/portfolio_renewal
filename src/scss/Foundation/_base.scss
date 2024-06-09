@@ -1,4 +1,5 @@
 @use "variable.scss" as variable;
+@use "mixin.scss" as mixin;
 
 //base
 html{
@@ -8,6 +9,9 @@ html{
     letter-spacing:1px;
     scroll-behavior: smooth;
     font-size:15px;
+    @include mixin.mq(md){
+        font-size:14px;
+    }
 }
 
 body{

@@ -281,9 +281,9 @@
             }
         }
         &__name{
-            margin-bottom:28px;
-            @include mixin.mq(lg){
-                margin-bottom:24px;
+            margin-bottom:24px;
+            @include mixin.mq(md){
+                margin-bottom:20px;
             }
         }
         &__desc{
@@ -298,7 +298,7 @@
                 margin-bottom:48px;
             }
             @include mixin.mq(md){
-                margin-bottom:40px;
+                margin-bottom:32px;
             }
             img{
                 box-shadow: 32px 38px 44px -12px #d1d1d1;
@@ -326,12 +326,12 @@
 
         }
         &__item__ttl{
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 300;
             font-family:variable.$font-en;
             visibility: hidden;
             padding-bottom: 24px;
-            margin-bottom:32px;
+            margin-bottom:28px;
             letter-spacing:2px;
             position: relative;
             @include mixin.mq(lg){
@@ -388,6 +388,9 @@
             margin-bottom:16px;
             color:variable.$text-darkwhite;
             visibility: hidden;
+            @include mixin.mq(md){
+                font-size:14px;
+            }
         }
         &__item__tools{
             color:#C1C1C1;
