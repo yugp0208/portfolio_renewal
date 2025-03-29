@@ -89,13 +89,19 @@ window.addEventListener('load', function(){
         loaderName,
         {
           opacity: 1,
-          y:0,
-          duration: 2,
+          y: -5,
+          duration: 1,
+          ease: "Power4.easeOut",
+          visibility: "visible",
+          delay: 0.3,
         }
       )
       .to(loaderName,{
-        opacity:0,
-        duration: 2,
+        opacity: 0,
+        y: -10,
+        duration: 0.7,
+        ease: "Power4.easeOut",
+        visibility: "visible",
       })
       .to(loaderBg,{
         y:"-100%",
