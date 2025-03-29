@@ -3,6 +3,8 @@
 
 #top{
     .l-header{
+        opacity: 0;
+        visibility:visible;
         &__nav{
             color:#333;
         }
